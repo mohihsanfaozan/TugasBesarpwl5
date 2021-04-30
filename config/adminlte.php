@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>AB.</b>Lestari jaya',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -236,23 +236,23 @@ return [
         ],
 
         [
-            'text' => 'Pengelolaan Barang',
-            'url'  => 'product',
-            'icon' => 'fas fa-fw fa-book',
+            'text' => 'Merek Barang',
+            'url'  => 'brand',
+            'icon' => 'fas fa-bars',
             'can'   => 'isAdmin',
         ],
 
         [
             'text' => 'Kategori Barang',
             'url'  => 'categorie',
-            'icon' => 'fas fa-fw fa-book',
+            'icon' => 'fas fa-fw fa-folder-open',
             'can'   => 'isAdmin',
         ],
 
         [
-            'text' => 'Merek Barang',
-            'url'  => 'brand',
-            'icon' => 'fas fa-fw fa-archive',
+            'text' => 'Pengelolaan Barang',
+            'url'  => 'product',
+            'icon' => 'fas fa-fw fa-book',
             'can'   => 'isAdmin',
         ],
         [
