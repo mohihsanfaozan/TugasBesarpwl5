@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class barangmasuk extends Model
 {
-    use HasFactory;
+    protected $table = 'barangmasuks';
+
+    protected $primaryKey = 'id';
+
+    public $incrementing = false;
+
+    protected $keyType = 'char';
 }

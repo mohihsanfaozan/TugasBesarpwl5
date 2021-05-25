@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\models\Barangmasuk;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class BarangmasukController extends Controller
 {
@@ -21,4 +22,10 @@ class BarangmasukController extends Controller
         return view('barangmasuk', compact('user', 'barangmasuks'));
     }
     
+    public function print_barangmasuk()
+    {
+        $barangmasuks = barangmasuk::all();
+        $pdf = PDF::loadview('print_barangmasuk', ['barangmasuk' => $barangmasuks]);
+        return $pdf->download('Laporan_Barang_Masuk.pdf');
+    }
 }

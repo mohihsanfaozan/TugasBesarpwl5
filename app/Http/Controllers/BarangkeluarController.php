@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\models\Barangkeluar;
 use Illuminate\Support\Facades\Storage;
+use PDF ;
 
 class BarangkeluarController extends Controller
 {
@@ -20,4 +21,11 @@ class BarangkeluarController extends Controller
         $barangkeluars = barangkeluar::all();
         return view('barangkeluar', compact('user', 'barangkeluars'));
     }
+    public function print_barangkeluar()
+    {
+        $barangkeluars = barangkeluar::all();
+        $pdf = PDF::loadview('print.barangkeluar', ['barangkeluar' => $barangkeluars]);
+        return $pdf->download('Laporan_Barang_Keluar.pdf');
+    }
 }
+

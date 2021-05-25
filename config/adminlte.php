@@ -231,8 +231,14 @@ return [
         // ],
         [
             'text' => 'Dashboard',
-            'url'  => 'admin/home',
+            'url'  => 'home',
             'icon' => 'fas fa-tachometer-alt',
+        ],
+        [
+            'text'        => 'User',
+            'url'         => 'admin/user',
+            'icon'        => 'fas fa-fw fa-user',
+            'can'         => 'isAdmin',
         ],
 
         [
@@ -263,12 +269,12 @@ return [
             'submenu'   => [
                 [
                     'text'  => 'Laporan Barang Masuk',
-                    'url'   => 'admin/barangmasuk',
+                    'url'   => 'barangmasuk',
                     'icon'  => 'fas fa-sign-in-alt',
                 ],
                 [
                     'text'  => 'Lapuran Barang Keluar',
-                    'url'   => 'admin/barangkeluar',
+                    'url'   => 'barangkeluar',
                     'icon'  => 'fas fa-sign-out-alt',
                 ],
             ],
